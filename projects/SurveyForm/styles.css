@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+}
+
+body{
+    background-image: url(https://i.blogs.es/0fd459/fo2a9909/1366_2000.jpg);
+    font-family: tahoma;
+    background-size:cover;
+    padding:40px;
+  }
+
+
+
+header{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div{
+    text-align: center;
+}
+header div h1{
+    font-size: 3em;
+
+}
+header div p{
+    font-size: 1.5em;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+form{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    font-size: 1.2em;
+    width: 800px;
+}
+
+fieldset{
+    border: none;
+    padding: 10px;
+  }
+
+#why {
+    display: inline-block;
+}
+
+#comments div{
+    display: inline-block;
+}
+
+input, label, select{
+    padding: 2px
+}
+  
+  input[type="submit"] {
+    display: block;
+    width: 30%;
+    max-width: 100px;
+    margin: 1em auto;
+    height: 1.5em;
+    font-size: 1rem;
+  }
+  input[type="submit"]:hover{
+    background: rgb(198, 225, 234);
+  } 
+  

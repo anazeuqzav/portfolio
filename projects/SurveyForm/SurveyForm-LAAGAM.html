@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content=" device-width, initial scale=1.0">
+    <title>Return and Exchange-LAAGAM</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 id="title">Return and Exchange</h1>
+        <br>
+        <p id="description">Thank you for buying LAAGAM. If you want to exchange or return your item(s), you can make it by filling in the following form within a maximum period of 30 days from the day you receive your package </p>
+      </div>
+    </header>
+    <!--End of header-->
+    <main>
+      <form>
+        <fieldset>
+          <div id="data">
+            <label for="name" id="name-label">Name 
+            <input id="name" type="text" placeholder="Enter your name" required></input></label>
+            <br>
+            <label for="email" id="email-label">Email
+            <input id="email" type ="email" placeholder="Enter your Email" required></input></label> 
+            <br>
+            <label for="number" id="number-label">Order number 
+            <input id="number" type="number" min="1111" max="9999" placeholder="Enter your order number" required></label>
+          </div>
+        </fieldset>
+
+        <fieldset id="whattodo">
+            <label>What do you want to do with this product?
+            <br> 
+            <label for="exchange"><input type="radio" name="exchange-return" value="exchange" class="inline">Exchange</label>
+            <label for="return"><input type="radio" name="exchange-return" value="return" class="inline">Return</label></label>
+          </fieldset>
+
+          <fieldset id="how">
+            <label for="dropdown" name="label-dropdown">How do you want to return/exchange this product?
+            <br>  
+              <select id="dropdown">
+                <option value="1">select one</option>
+                <option value="2">Home pick-up</option>
+                <option value="3">Delivery at post office</option>
+              </select>
+            </label>
+          </fieldset>
+          
+          <fieldset> 
+            <div id="why">        
+              <label>Why do you want to return/exchange this product?</label>
+            
+              <div>
+                <input type="checkbox" value="size">
+                <label>not my size</label>
+                
+              </div>
+              <div>
+                <input type="checkbox" value="defect">
+                <label>it has a defect</label>
+              </div>
+              <div>
+                <input type="checkbox" value="expected">
+                <label>not as expected</label>
+              </div>
+            </div> 
+          </fieldset>
+
+          <fieldset id="comments">
+            <div>
+              <label for="suggestions">Any comments or suggestion?</label>
+              <br>
+              <textarea id="suggestions" name="suggestions" rows="10" cols="80"></textarea>
+            </div>
+            
+          </fieldset>
+        <input type="submit" id="submit" name="submit" value="Submit"></input>
+        
+      </form>
+
+    </main>
+   
+    
+  </body>
+
+</html>
+
