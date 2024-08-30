@@ -7,7 +7,13 @@ function checkPalindrome() {
         alert('Please input a value');
         return;
     }
-    const cleanedText = inputText.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    const cleanedText = inputText
+    .toLowerCase()
+    .normalize("NFD")  // Descompone caracteres Unicode en sus partes constituyentes
+    .replace(/[\u0300-\u036f]/g, '')  // Elimina los signos diacríticos (acentos)
+    .replace(/[^a-z0-9]/g, '');  // Elimina caracteres no alfanuméricos
+
     const reversedText = cleanedText.split('').reverse().join('');
     const isPalindrome = cleanedText === reversedText;
 
