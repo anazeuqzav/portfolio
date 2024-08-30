@@ -8,11 +8,7 @@ function checkPalindrome() {
         return;
     }
 
-    const cleanedText = inputText
-    .toLowerCase()
-    .normalize("NFD")  // Descompone caracteres Unicode en sus partes constituyentes
-    .replace(/[\u0300-\u036f]/g, '')  // Elimina los signos diacríticos (acentos)
-    .replace(/[^a-z0-9]/g, '');  // Elimina caracteres no alfanuméricos
+    const cleanedText = inputText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');  // Elimina caracteres no alfanuméricos
 
     const reversedText = cleanedText.split('').reverse().join('');
     const isPalindrome = cleanedText === reversedText;
