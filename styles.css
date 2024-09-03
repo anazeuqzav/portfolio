@@ -42,27 +42,45 @@ body {
     border-radius: 5px;
 }
 
-/* Welcome Section Styles */
 .welcome-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh;
-    padding-top: 60px; /* To account for fixed navbar */
+    padding: 60px 40px; /* Increased padding to provide some space around the content */
+    margin-top: 60px; /* To account for fixed navbar */
     background: linear-gradient(to right, #FFF0B3, #FFB0F2);
     color: #575757;
     text-align: center;
+    width: 100%; /* Full width of the page */
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .welcome-section h1 {
     font-size: 52px;
-    margin: 0;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .welcome-section p {
-    font-size: 28px;
-    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 5%; /* Reduced margin to allow the text to spread wider */
+    color: #444;
+    max-width: 90%; /* Text width will occupy up to 90% of the section */
+}
+
+.welcome-section p:first-of-type {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+}
+
+.welcome-section p:last-of-type {
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
 }
 
 /* Projects Section Styles */
@@ -170,4 +188,74 @@ body {
     color: #fff;
     text-align: center;
     padding: 20px;
+}
+
+/* Responsive Design */
+
+/* Adjustments for small screens like mobile devices */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list a {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .welcome-section h1 {
+        font-size: 40px;
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+        margin: 10px 3%;
+    }
+
+    .projects-section-header {
+        font-size: 28px;
+    }
+
+    .project-thumbnail {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-section-header {
+        font-size: 28px;
+    }
+
+    .contact-details {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+/* Further adjustments for very small screens (like small mobile devices) */
+@media (max-width: 480px) {
+    .nav-list a {
+        font-size: 14px;
+    }
+
+    .welcome-section h1 {
+        font-size: 32px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .contact-details {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
 }
