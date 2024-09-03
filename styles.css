@@ -50,18 +50,18 @@ body {
     justify-content: center;
     height: 50vh;
     padding-top: 60px; /* To account for fixed navbar */
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    color: #fff;
+    background: linear-gradient(to right, #FFF0B3, #FFB0F2);
+    color: #575757;
     text-align: center;
 }
 
 .welcome-section h1 {
-    font-size: 48px;
+    font-size: 52px;
     margin: 0;
 }
 
 .welcome-section p {
-    font-size: 24px;
+    font-size: 28px;
     margin-top: 10px;
 }
 
@@ -86,30 +86,47 @@ body {
     max-width: 1200px;
 }
 
+/* Project Tile Styles */
 .project-tile {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    text-decoration: none; /* Remove underline from links */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-tile:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.project-image {
-    width: 100%;
-    height: auto;
-    display: block;
+.project-thumbnail {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
+/* Project Title Styles */
 .project-title {
     font-size: 20px;
-    padding: 15px;
-    color: #333;
+    padding: 10px;
     background-color: #fff;
+    color: #333;
+    text-align: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-top: -5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-tile:hover .project-title {
+    color: #f38895;
+    font-weight: bold;
 }
 
 /* Contact Section Styles */
@@ -135,42 +152,16 @@ body {
 
 .contact-details {
     color: #fff;
-    background-color: #ff7e5f;
-    border: 2px solid #ff7e5f;
-    border-radius: 5px;
-    padding: 10px 20px;
     text-decoration: none;
-    font-size: 18px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .contact-details:hover {
-    background-color: #fff;
-    color: #ff7e5f;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-list a {
-        font-size: 20px;
-        padding: 10px 15px;
-    }
-
-    .welcome-section h1 {
-        font-size: 40px;
-    }
-
-    .welcome-section p {
-        font-size: 22px;
-    }
-
-    .projects-section-header {
-        font-size: 32px;
-    }
-
-    .contact-section-header {
-        font-size: 28px;
-    }
+    background-color: #575757;
 }
 
 /* Footer Styles */
@@ -178,24 +169,5 @@ body {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 20px;
 }
-
-.footer p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-.footer a {
-    color: #ff7e5f;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 5px;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: #feb47b;
-}
-
