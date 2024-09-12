@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cash Register</h1>
+        <div class="register">
+            <p>Item Price: $<span id="item-price">19.50</span></p>
+            <input type="number" id="cash" placeholder="Enter cash amount" step="0.01" min="0">
+            <button id="purchase-btn">Make Purchase</button>
+            <p id="change-due">Change due will be displayed here</p>
+            <div id="drawer-info">
+                <h2>Cash Drawer</h2>
+                <ul id="drawer-contents">
+                    <!-- The cash drawer contents will be dynamically generated here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
