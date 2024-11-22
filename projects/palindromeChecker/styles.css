@@ -98,3 +98,72 @@ input, button {
 button:active {
     transform: scale(0.98);
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #text-input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #check-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+
+    .palindrome-definition-section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .palindrome-definition {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    section {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #text-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #check-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #result {
+        font-size: 14px;
+    }
+
+    .palindrome-definition-section {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .palindrome-definition {
+        font-size: 12px;
+    }
+}

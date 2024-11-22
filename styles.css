@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -41,6 +42,7 @@ body {
     border-radius: 5px;
 }
 
+/* Welcome Section Styles */
 .welcome-section {
     display: flex;
     flex-direction: column;
@@ -51,8 +53,8 @@ body {
     background: linear-gradient(to right, #FFF0B3, #FFB0F2);
     color: #575757;
     text-align: center;
-    width: 100%; /* Full width of the page */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .welcome-section h1 {
@@ -145,6 +147,7 @@ body {
     font-weight: bold;
 }
 
+
 /* Contact Section Styles */
 .contact-section {
     padding: 60px 20px;
@@ -188,76 +191,139 @@ body {
     padding: 20px;
 }
 
-/* Responsive Design */
-
-/* Adjustments for small screens like mobile devices */
 @media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-list a {
-        padding: 10px 0;
-        font-size: 16px;
-    }
-
-    .welcome-section h1 {
-        font-size: 40px;
-    }
-
-    .welcome-section p {
-        font-size: 16px;
-        margin: 10px 3%;
-    }
-
-    .projects-section-header {
-        font-size: 28px;
+    .projects-section-header{
+        font-size: 24px;
+        line-height: 1.4; 
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; /* Display projects one below the other on small screens */
+        grid-template-columns: 1fr;
+        gap: 20px; 
     }
 
     .project-thumbnail {
-        width: 100%;
-        height: auto;
+        width: 100%; 
+        height: auto; 
     }
 
-    .contact-section-header {
-        font-size: 28px;
+    .project-tile {
+        width: 100%; 
     }
-
-    .contact-details {
-        font-size: 18px;
-        padding: 8px 16px;
-    }
-}
-
-/* Further adjustments for very small screens (like small mobile devices) */
-@media (max-width: 480px) {
-    .nav-list a {
-        font-size: 14px;
+    .welcome-section {
+        padding: 20px 10px; 
     }
 
     .welcome-section h1 {
-        font-size: 32px;
+        font-size: 30px; 
+        margin-bottom: 5px;
     }
 
     .welcome-section p {
-        font-size: 14px;
+        font-size: 12px; 
+        margin: 5px 2%;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr; /* Continue showing projects in a single column */
+    .welcome-section p:first-of-type {
+        font-size: 16px;
+    }
+
+    .welcome-section p:last-of-type {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .footer {
+        padding: 15px; 
+        font-size: 14px; 
+        line-height: 1.4; 
+    }
+
+    .contact-section {
+        padding: 40px 20px; 
+        align-items: center;
+    }
+
+    .contact-section-header {
+        font-size: 28px; 
+        margin-bottom: 15px;
+    }
+
+    .contact-links {
+        display: block; 
+        margin-top: 20px;
     }
 
     .contact-details {
+        display: block; 
+        width: 80%;
+        margin: 5px auto; 
         font-size: 16px;
-        padding: 6px 12px;
+        padding: 10px;
+    }
+
+    .contact-details i {
+        margin-right: 8px; 
+    }
+
+}
+
+/* Teléfonos pequeños (pantallas <= 480px) */
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+
+    .project-thumbnail {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .project-tile {
+        width: 100%; 
+    }
+
+    .welcome-section {
+        padding: 20px 10px;
+    }
+
+    .welcome-section h1 {
+        font-size: 34px; 
+        margin-bottom: 5px;
+    }
+
+    .welcome-section p {
+        font-size: 12px; 
+        margin: 5px 2%;
+    }
+
+    .welcome-section p:first-of-type {
+        font-size: 16px;
+    }
+
+    .welcome-section p:last-of-type {
+        font-size: 14px;
+        margin-top: 10px;
     }
 
     .footer {
-        padding: 15px;
+        padding: 10px; 
+        font-size: 12px; 
+        line-height: 1.3; 
     }
+    .contact-section {
+        padding: 30px 15px; 
+    }
+
+    .contact-section-header {
+        font-size: 24px;
+    }
+
+    .contact-details {
+        font-size: 14px; 
+        padding: 8px;
+        width: 80%;
+        margin: 5px auto;
+    }
+
 }
